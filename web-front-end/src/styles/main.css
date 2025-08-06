@@ -1,0 +1,351 @@
+.container {
+    width: 100%;
+    height: auto;
+    padding: 100px 0 0 0;
+    border: 0;
+
+    --flex-direction: column;
+
+    /* margin: 0 auto; */
+}
+
+.section {
+    width: 80%;
+    padding: 80px 0;
+    --flex-direction: column;
+}
+
+
+.section__banner{
+    width: 80%;
+    /* padding: 50px; */
+    gap: 15px;
+
+    --flex-direction: row;
+    --align-items: start; 
+    --justify-content: space-between
+}
+
+.section__banner img{
+    width: 30%;
+    height: auto;
+    /* padding: 50px; */
+    gap: 15px;
+}
+
+.banner__content{
+    width: 60%;
+    padding: 50px 10px;
+    gap: 40px;
+    --flex-direction: column; 
+    --align-items: start; 
+    --justify-content: start
+}
+
+.content__top{
+    gap: 20px;
+    --flex-direction: column;
+}
+
+.banner__content .p-top {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-500);
+}
+
+.banner__content .h1{
+    width: 60%;
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--gray-900);
+}
+
+.banner__content .p-middle {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gray-500);
+}
+
+.section__slide{
+    position: relative;
+
+    margin: 0 auto;
+
+    z-index: 1;
+}
+
+.section__list{
+    width: 100%;
+    padding: 100px 0;
+    --flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    gap: 25px;
+    background-image: linear-gradient(to right, #9249f247, #ff5f493d);
+}
+
+.section__list .list__content{
+    width: 20%;
+    height: fit-content;
+}
+
+.card__top {
+    --flex-direction: row; 
+    --align-items: center; 
+    --justify-content: center;
+    width: 80%;
+    height: fit-content;
+    position: absolute;
+    bottom: -20%;
+    left: 10%;
+    right: 0;
+    gap: 20px;
+
+    z-index: 1;
+    /* border: 1px solid red; */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.card__top img{
+    width: 20%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.section__work {
+    width: 100%;
+    padding: 100px 0;
+    --flex-direction: row;
+    align-items: start;
+    justify-content: space-around;
+    gap: 15px;
+    background-image: #fff;
+    border-top: 1px solid var(--gray-500);
+}
+
+.work__content {
+    width: 30%;
+    height: fit-content;
+    --flex-direction: column;
+    gap: 10px;
+}
+
+.section__service {
+    width: 100%;
+    padding: 100px 0;
+    --flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-image: linear-gradient(to right, #9249f247, #ff5f493d);
+}
+
+.section__achievment {
+    width: 100%;
+    padding: 100px 0;
+    --flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-image: #fff;
+}
+
+.section__study{
+    width: 100%;
+    padding: 100px 0;
+    --flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-image: #fff;
+}
+
+.section__slide .slide{
+    width: 100%;
+}
+
+.content__middle {
+    width: 80%;
+    height: 35vh;
+    border-radius: 4.0px;
+    padding: 20px 10px;
+
+    --flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+.content__middle .project_modal{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(12, 12, 12, 0.712);
+}
+
+.icon-left {
+    position: absolute;
+    left: -50px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--gray-white);
+    color: var(--primary-500);
+    border-radius: 50%;
+    padding: 10px;
+    outline: 1px solid var(--primary-500);
+    cursor: pointer;
+}
+
+.icon-left:hover{
+    background-color: var(--primary-500);
+    color: var(--gray-white);
+}
+
+.icon-right{
+    position: absolute;
+    right: -50px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-500);
+    color: var(--gray-white);
+    border-radius: 50%;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.icon-right:hover{
+    background-color: var(--primary-600);
+    color: var(--gray-white);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+    .section__banner{
+        display: flex;
+        --flex-direction: column;
+        --align-items: start; 
+        --justify-content: start;
+        gap: 20px;
+    }
+
+    .section__banner img{
+        width: 60%;
+        height: auto;
+        /* padding: 50px; */
+        gap: 15px;
+    }
+
+    .banner__content{
+        width: 100%;
+
+        --flex-direction: column;
+        --align-items: start;
+        --justify-content: start;
+        padding: 0;
+    }
+
+    .banner__content .p-middle {
+        width: 60%;
+        font-size: 24px;
+    }
+
+    .card__top {
+        --flex-direction: column; 
+        --align-items: center; 
+        --justify-content: center;
+        width: 60%;
+        height: fit-content;
+        position: absolute;
+        bottom: -20%;
+        left: 10%;
+        right: 0;
+        gap: 40px;
+
+        z-index: 1;
+        /* border: 1px solid red; */
+        background-color: #fff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .section__list{
+        --flex-direction: column;
+        padding: 20% 0 0 0;
+    }
+
+    .section__list .list__content{
+        width: 80%;
+        height: fit-content;
+    }
+
+    .section__work {
+        padding: 100px 0;
+        --flex-direction: column;
+    }
+
+    .work__content {
+        width: 80%;
+        height: fit-content;
+        --align-items: start; 
+        --justify-content: start;
+        padding: 20px 0 0 0;
+    }
+
+    .section__service {
+        width: 100%;
+        padding: 100px 0;
+        --flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card{
+        --flex-direction: column;
+    }
+
+    .section__achievment {
+        width: 60%;
+        padding: 100px 0;
+        --flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .section__achievment div{
+        width: 100%;
+        justify-content: start;
+    }
+
+    .section__study{
+    width: 60%;
+    padding: 100px 0;
+    --flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background-image: #fff;
+    }
+
+    .content__middle {
+        width: 100%;
+        height: 40vh;
+        border-radius: 4.0px;
+        padding: 20px 10px;
+
+        --flex-direction: column;
+        gap: 20px;
+        position: relative;
+    }
+
+}
